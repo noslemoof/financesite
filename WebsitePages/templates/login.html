@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block content %}
+<body>
+<div class="Title">Login</div>
+{% if error_message %}
+<p>{{ error_message }}</p>
+{% endif %}
+<form method="post" class = 'form-format'>
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="Login">
+</form>
+</body>
+{% endblock %}

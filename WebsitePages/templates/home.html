@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+{% block content %}
+
+
+<div class="paragraph-back">
+    <div class="paragraph">
+        <table class="tablele">
+            <thead>
+            <tr class="tretre">
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in sales_items %}
+            <tr class="trotro">
+                <td>{{ item.item_name }}</td>
+                <td>${{ item.item_price }}</td>
+                <td>Stock: {{ item.item_stock }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="paragraph">
+        Total earnings: ${{ earnings }}
+        items sold: {{ quantity }}
+    </div>
+</div>
+{% endblock %}

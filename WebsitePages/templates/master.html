@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    {% csrf_token %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONEY</title>
+    <script src="/static/node_modules/mithril/mithril.js"></script>
+    <script type="module" src="/static/components/cashier.js" defer></script>
+    <script type="module" src="/static/components/transaction_history.js" defer></script>
+    <style>
+        {% include 'styles.css' %}
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <a class="logo" href="/sales_report"></a>
+    <div class="tabs">
+        {% if user.is_authenticated %}
+        <a class="tab" href="{% url 'logout' %}" onclick="return confirm('Are you logging out?')">Logout</a>
+        {% else %}
+        <a class="tab" href="{% url 'login' %}">Login</a>
+        {% endif %}
+        <a class="tab" href="/sales_report">Sales report</a>
+        {% if user.is_authenticated %}
+        <a class="tab" href="{% url 'Cashier' %}">Start Cashier</a>
+        {% endif %}
+        <a class="tab" href="/transaction_history">Transaction History</a>
+    </div>
+</div>
+
+<div class = "backboard">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+
+
+
+/* background settings */
+.image-container {
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.rat {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property will make the image cover the entire container */
+}
+
+.backboard {
+  position: relative; /* Fixed positioning relative to the viewport */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: #CCCCD9;
+}
+
+.Title {
+  text-align: center;
+  font-size: 48px;
+  padding: 10px 20px; /* Adjust padding for space around the text */
+  display: inline-block; /* Display as inline-block */
+  border-radius: 10px; /* Rounded corners */
+  position: relative; /* Enable relative positioning */
+  left: 50%; /* Shift the container to the right by 50% of the page width */
+  transform: translateX(-50%); /* Move the container back by 50% of its own width */
+}
+/* End of background settings */
+
+/* Home Page formatting */
+
+.Loggin-status {
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px; /* Rounded corners */
+  position: relative; /* Enable relative positioning */
+  left: 50%; /* Shift the container to the right by 50% of the page width */
+  transform: translateX(-50%);
+  display: block;
+}
+
+.paragraph-back {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 20px; /* Adjust the space between paragraphs */
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.paragraph {
+  flex: 1;
+  word-wrap: break-word;
+  padding: 20px; /* Adjust the padding */
+  background: white;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 400px; /* Set a max-width if needed */
+}
+
+/* End of Home Page Formatting */
+
+/* Table settings */
+.table-wrapper {
+  max-width: 100%; /* Adjust this value as needed */
+  overflow-x: auto; /* Allows horizontal scrolling if table overflows */
+  margin: 0 auto; /* Center the table if it's smaller than the parent */
+}
+
+/* Apply a width to your table that ensures it fits within the wrapper */
+table {
+  width: 100%; /* Makes the table responsive */
+  max-width: 100%; /* Ensures the table is not wider than its container */
+  table-layout: fixed; /* Optional: Prevents table cells from growing too wide */
+}
+
+/* Adjust the width of th and td elements as needed */
+th, td {
+  white-space: nowrap; /* Ensures content stays on a single line */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis to overflowing content */
+  padding: 3px; /* Adjust padding to reduce cell size */
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+}
+
+.item-table th,
+.item-table td {
+  padding: 15px 12px; /* Adjust cell padding */
+  border: 3px solid #000000; /* Add borders */
+}
+
+.item-table th {
+  background-color: #e3dac9; /* Header background color */
+  font-weight: bold; /* Bold font for headers */
+  text-align: left; /* Align text to the left */
+  padding-top: 12px; /* Adjust top padding for header */
+  padding-bottom: 12px; /* Adjust bottom padding for header */
+  margin: 0; /* Reset margin */
+}
+
+.row-item1 {
+  align-items: left; /* Align items vertically */
+  padding: 0px 50px;
+}
+
+.row-item2 {
+  align-items: center; /* Align items vertically */
+  padding: 0px 50px;
+}
+
+.row-item3 {
+  align-items: right; /* Align items vertically */
+  padding: 0px 50px;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+/* End of table settings */
+
+/* Form format*/
+
+.form-format {
+  font-size: 20px;
+  position: relative; /* Enable relative positioning */
+  left: 50%; /* Shift the container to the right by 50% of the page width */
+  transform: translateX(-40%);
+  width: 400px;
+  padding: 34px;
+}
+
+/* End of form format */
+
+
+.header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between logo and nav */
+}
+
+.logo {
+    background: url('/static/images/title.png') no-repeat center center;
+    background-size: contain; /* Ensures the logo fits within the dimensions */
+    width: 150px; /* Logo width */
+    height: 60px; /* Logo height */
+    display: block; /* Allows width and height to take effect */
+    text-indent: -9999px; /* Hides the text "Picolove Finance" if it's within the <a> tag */
+}
+
+.header a.logo {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+
+.tab {
+    background-color: white; /* Set background to white */
+    color: #333; /* Dark text color for contrast */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Adjust font size as needed */
+    font-family: 'Arial', sans-serif; /* Use a common, clean font-family */
+    padding: 12px 20px; /* Add some padding inside the tabs */
+    border: 1px solid #ddd; /* Light border for each tab */
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-right: 4px; /* Space between tabs */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover state for tabs */
+.tab:hover {
+    background-color: #f8f8f8; /* Light grey background on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+/* Active tab styles */
+.tab.active {
+    background-color: #e7e7e7; /* Slightly darker background for active tab */
+    color: #333; /* Dark text color for active tab */
+    border-bottom: 2px solid #333; /* Highlight active tab with a bottom border */
+}
+
+/* Container for tabs */
+.tabs {
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the start */
+    gap: 8px; /* Add space between tabs */
+    background-color: #fff; /* White background for the tabs container */
+}
+
+
+
+
+/* Global Styles */
+* { box-sizing: border-box; }
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* App Container and Sections */
+.app-container {
+    display: flex; /* Use flexbox to align children side by side */
+    flex-direction: row; /* Align children horizontally */
+    justify-content: space-between; /* Distribute space between children */
+    align-items: start; /* Align items to the start of the container */
+    width: 100%; /* Take full width of the parent/container */
+    padding: 20px;
+    /* Removed the border based on your requirement */
+    border-radius: 10px;
+}
+
+/* Make sure children of the .app-container are allowed to grow and shrink as needed */
+.app-container > div {
+    flex: 1; /* Allow each child to grow as needed */
+    margin: 0 10px; /* Add some space between the children */
+    padding: 20px;
+}
+/* Section 1: Item Selection */
+.app-container .item-selection {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+
+.app-container .item-selection .selection-box {
+    flex-basis: calc(50% - 10px); /* Subtract gap from 50% width */
+    flex-grow: 1;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container .item-selection .selection-box label,
+.app-container .item-selection .selection-box select,
+.app-container .item-selection .selection-box input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.basket h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.app-container .basket-payment {
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+/* Section 3: Transactions */
+.app-container .latest-transactions {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px;
+    padding: 5px;
+}
+
+.transactions-table th, .transactions-table td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.transactions-table thead {
+    background: #f2f2f2;
+}
+
+.transactions-table tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.transactions-table tbody tr:nth-child(even) {
+    background: white;
+}
+
+/* Buttons and Form Items */
+.pay-button, .add-to-basket {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pay-button {
+    background-color: #2196F3;
+}
+
+.add-to-basket {
+    background-color: #00a4ef;
+}
+
+.pay-button:hover, .add-to-basket:hover {
+    opacity: 0.6;
+}
+
+.clear-basket-button {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: lightslategrey;
+}
+
+.clear-basket-button:hover {
+    opacity: 0.6;
+}
+
+
+
+
+.form-item {
+  margin-right: 10px;
+}
+
+.Field-middle {
+    display: flex;
+    align-items: flex-start; /* Align to the start (top) */
+    justify-content: flex-start; /* Align horizontally to the left */
+    flex-direction: column; /* Stack vertically */
+    padding-top: 20px;
+    width: 100%; /* Take full width of the container */
+}
+
+.Input-container {
+    display: flex;
+    flex-direction: row; /* Place input and button side by side */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-start; /* Align content to the left */
+    width: 100%; /* Full width to contain children */
+    margin-bottom: 10px; /* Space between this and the next element */
+}
+
+.Input-container input,
+.Input-container button {
+    margin-right: 10px; /* Space after input and button */
+}
+
+/* Style for the input field specifically */
+.Input-container input {
+    min-width: 300px; /* or any other fixed value that suits your design */
+    /* Rest of your input styles */
+}
+.employee-data-view {
+    background-color: #f2f2f2 ;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.tablele {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+    margin: 10px;
+}
+
+.tretre {
+    background: #f2f2f2;
+    text-align: left;
+
+}
+
+.trotro:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.trotro:nth-child(odd) {
+    background-color: white;
+}
+
+/* ... Other styles have been omitted for brevity ... */
+
